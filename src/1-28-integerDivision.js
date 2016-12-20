@@ -8,6 +8,8 @@
  * operators. Find a fast way to do it.
  */
 
+/*jshint esversion: 6 */
+
 const integerDivision = (numerator, denominator) => {
   if (denominator === 0) { return NaN; } // Handle non-divisible cases
 
@@ -15,7 +17,8 @@ const integerDivision = (numerator, denominator) => {
   let result = 1;
   let negative = false;
 
-  if (!(numerator < 0 && denominator < 0) && (numerator < 0 || denominator < 0)) {
+  if (!(numerator < 0 && denominator < 0) &&
+    (numerator < 0 || denominator < 0)) {
     // Flag for negative input in either numerator or denominator
     negative = true;
   }

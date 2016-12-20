@@ -9,6 +9,8 @@
  * minimum number of races in which this can be done.
  */
 
+/*jshint esversion: 6 */
+
 class Horse {
   constructor(name, speed) {
     this.name = name;
@@ -17,7 +19,8 @@ class Horse {
 }
 
 const race = (horsesArray, raceNumber) => {
-  if (raceNumber || raceNumber === 0) { // Only assign a race group for the first race
+  if (raceNumber || raceNumber === 0) {
+    // Only assign a race group for the first race
     horsesArray.forEach(function(horse) {
       horse.raceGroup = raceNumber;
     });
