@@ -8,13 +8,12 @@
  * operators. Find a fast way to do it.
  */
 
-const integerDivision = function(numerator, denominator) {
-  if (denominator === 0) { return NaN; } // Handles non-divisible cases
+const integerDivision = (numerator, denominator) => {
+  if (denominator === 0) { return NaN; } // Handle non-divisible cases
 
-  let result = 1;
   const originalDenominator = Math.abs(denominator);
+  let result = 1;
   let negative = false;
-
 
   if (!(numerator < 0 && denominator < 0) && (numerator < 0 || denominator < 0)) {
     // Flag for negative input in either numerator or denominator
@@ -30,7 +29,7 @@ const integerDivision = function(numerator, denominator) {
   }
 
   while (denominator > numerator) {
-    denominator -= originalDenominator; // Handles over-doubling by subtracting
+    denominator -= originalDenominator; // Handle over-doubling by subtracting
     result--;
   }
 

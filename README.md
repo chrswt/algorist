@@ -8,8 +8,8 @@ Most code has been written in ES2015 syntax, which requires an active Babel tran
 
 ## Table of Contents
 1. Introduction to Algorithm Design
-  - I-28: [Integer Division](github link)
-  - I-29: [25 Horses](github link)
+  - I-28: [Integer Division](https://github.com/chrswt/algorist/blob/master/src/1-28-integerDivision.js)
+  - I-29: [25 Horses](https://github.com/chrswt/algorist/blob/master/src/1-29-25horses.js)
 2. Algorithm Analysis
 3. Data Structures
 4. Sorting and Searching
