@@ -39,7 +39,7 @@ const ramanujanHardy = (n) => {
 
           if (c3 + d3 > a3 + b3) { break; }
 
-          if (a3 + b3 === c3 + d3) {
+          if (a3 + b3 === c3 + d3 && b !== c) {
             console.log(`${a3 + b3} = ${a}^3 + ${b}^3 = ${c}^3 + ${d}^3`);
             result.push(a3 + b3);
           }
