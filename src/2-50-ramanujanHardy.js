@@ -30,7 +30,7 @@ const ramanujanHardy = (n) => {
 
         /*
          * Break condition when solution is iterating out of bounds that
-         * greatly improve this algorithm's efficiency (repeated for d)
+         * greatly improves this algorithm's efficiency (repeated for d)
          */
         if (c3 > a3 + b3) { break; }
 

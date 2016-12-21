@@ -12,7 +12,7 @@ execute `node [filename]` in the `/src` directory.
   - 1-29: [25 Horses](https://github.com/chrswt/algorist/blob/master/src/1-29-25horses.js)
 2. Algorithm Analysis
   - 2-43: [Reservoir Sampling](https://github.com/chrswt/algorist/blob/master/src/2-43-reservoirSampling.js)
-  - 2-50: [Ramanujan Hardy Numbers](https://github.com/chrswt/algorist/blob/master/src/2-50-ramanujan-hardy.js)
+  - 2-50: [Ramanujan Hardy Numbers](https://github.com/chrswt/algorist/blob/master/src/2-50-ramanujanHardy.js)
 3. Data Structures
 4. Sorting and Searching
 5. Graph Traversal
