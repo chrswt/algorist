@@ -2,10 +2,9 @@
 JavaScript solutions for interview problems taken from The Algorithm Design Manual, 2nd Edition by Steven S. Kiena
 
 ## Running the Code
-All the code has been written with ES2015 syntax, which newer version of Node.js are able to support.
-However, older versions require an active Babel transpilation. First, run `npm i` to install all the require modules into the `node_modules` directory. There are two options:  
-1. Use `-r babel-register` as a Node.js parameter
-2. Install `babel-node` and run the code using that interpreter
+The output for all code can be run with the newest version of node (tested on `v6.9.3`), which supports ES2015 syntax.
+For older versions, transpilation using a `Babel` watcher or using `babel-node` is required. To run the code, simply 
+execute `node [filename]` in the `/src` directory.
 
 ## Table of Contents
 1. Introduction to Algorithm Design

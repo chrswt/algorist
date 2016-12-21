@@ -1,7 +1,9 @@
+"use strict";
+
 /*
  * The Algorithm Design Manual, 2nd Edition
  * Steven S. Skiena
- * Interview Problems (1-28), p.30
+ * Interview Problems (I-28), p.30
  *
  * INTEGER DIVISION
  * Write a function to perform integer division without using either the / or *
@@ -10,15 +12,16 @@
 
 /*jshint esversion: 6 */
 
-const integerDivision = (numerator, denominator) => {
-  if (denominator === 0) { return NaN; } // Handle non-divisible cases
+var integerDivision = function integerDivision(numerator, denominator) {
+  if (denominator === 0) {
+    return NaN;
+  } // Handle non-divisible cases
 
-  const originalDenominator = Math.abs(denominator);
-  let result = 1;
-  let negative = false;
+  var originalDenominator = Math.abs(denominator);
+  var result = 1;
+  var negative = false;
 
-  if (!(numerator < 0 && denominator < 0) &&
-    (numerator < 0 || denominator < 0)) {
+  if (!(numerator < 0 && denominator < 0) && (numerator < 0 || denominator < 0)) {
     // Flag for negative input in either numerator or denominator
     negative = true;
   }
@@ -36,8 +39,7 @@ const integerDivision = (numerator, denominator) => {
     result--;
   }
 
-  return result === 0 ? 0 :
-    negative ? -result : result;
+  return result === 0 ? 0 : negative ? -result : result;
 };
 
 console.log(integerDivision(18, 3)); // 6
@@ -45,3 +47,4 @@ console.log(integerDivision(-24, 2)); // -12
 console.log(integerDivision(39, -3)); // -13
 console.log(integerDivision(-42, -20)); // 2
 console.log(integerDivision(1000, 10)); // 100
+//# sourceMappingURL=1-28-integerDivision.js.map

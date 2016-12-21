@@ -1,7 +1,11 @@
+'use strict';
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 /*
  * The Algorithm Design Manual, 2nd Edition
  * Steven S. Skiena
- * Interview Problems (1-29), p.30
+ * Interview Problems (I-28), p.30
  *
  * 25 HORSES
  * There are 25 horses. At most, 5 horses can race together at a time. You must
@@ -11,55 +15,55 @@
 
 /*jshint esversion: 6 */
 
-class Horse {
-  constructor(name, speed) {
-    this.name = name;
-    this._speed = speed;
-  }
-}
+var Horse = function Horse(name, speed) {
+  _classCallCheck(this, Horse);
 
-const race = (horsesArray, raceNumber) => {
+  this.name = name;
+  this._speed = speed;
+};
+
+var race = function race(horsesArray, raceNumber) {
   if (raceNumber || raceNumber === 0) {
     // Only assign a race group for the first race
-    horsesArray.forEach(function(horse) {
+    horsesArray.forEach(function (horse) {
       horse.raceGroup = raceNumber;
     });
   }
 
-  horsesArray.sort((a, b) => {
+  horsesArray.sort(function (a, b) {
     return a._speed < b._speed;
   });
 
   return horsesArray;
 };
 
-const stable = [];
+var stable = [];
 
-const startSimulation = (numHorses) => {
+var startSimulation = function startSimulation(numHorses) {
   // Populate the stable with horses of varying speeds
-  const posA = 'a'.charCodeAt(0);
-  const raceGroup1 = [];
-  const raceGroup2 = [];
-  let raceResults1 = {};
-  let raceResults2;
-  let raceResults3;
-  let fastestGroup;
-  let secondFastestGroup;
-  let thirdFastestGroup;
-  let numRaces = 0;
+  var posA = 'a'.charCodeAt(0);
+  var raceGroup1 = [];
+  var raceGroup2 = [];
+  var raceResults1 = {};
+  var raceResults2 = void 0;
+  var raceResults3 = void 0;
+  var fastestGroup = void 0;
+  var secondFastestGroup = void 0;
+  var thirdFastestGroup = void 0;
+  var numRaces = 0;
 
-  for (let i = 0; i < numHorses; i++) {
+  for (var i = 0; i < numHorses; i++) {
     stable.push(new Horse(String.fromCharCode(posA + i), i));
   }
 
   // Split the horses into 5 groups of 5 and race them
-  for (let j = 0; j < 5; j++) {
+  for (var j = 0; j < 5; j++) {
     raceResults1['group' + j] = race(stable.slice(j * 5, j * 5 + 5), j);
     numRaces++;
   }
 
   // Race the fastest of each group to eliminate other horses
-  for (let k = 0; k < 5; k++) {
+  for (var k = 0; k < 5; k++) {
     raceGroup1.push(raceResults1['group' + k][0]);
   }
   raceResults2 = race(raceGroup1);
@@ -86,10 +90,10 @@ const startSimulation = (numHorses) => {
   raceResults3 = race(raceGroup2);
   numRaces++;
 
-  console.log('The 3 fastest horses are:',
-    raceResults2[0], raceResults3[0], raceResults3[1]);
+  console.log('The 3 fastest horses are:', raceResults2[0], raceResults3[0], raceResults3[1]);
 
   return numRaces;
 };
 
 console.log(startSimulation(25)); // 7
+//# sourceMappingURL=1-29-25horses.js.map
